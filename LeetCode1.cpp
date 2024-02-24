@@ -1,11 +1,3 @@
-#include <iostream>
-using namespace std;
-
-int main() {
-    cout << "Hello World!" << endl;
-    return 0;
-}
-
 
 // 双重for循环遍历
 class Solution {
