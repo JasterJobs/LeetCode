@@ -13,8 +13,7 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* head = new ListNode(-1);
-        ListNode* list(head);
+        ListNode* head = new ListNode(-1), *list(head);
         int append = 0;
         while (l1 != NULL || l2 != NULL) {
             int sum = append;
@@ -30,8 +29,7 @@ public:
             } else {
                 append = 0;  
             }
-            ListNode* node = new ListNode(sum);
-            list->next = node;
+            list->next = new ListNode(sum);
             list = list->next;
             if (l1 != NULL) {
                 l1 = l1->next;
@@ -41,8 +39,7 @@ public:
             }
         }
         if (append != 0) {
-            ListNode* node = new ListNode(append);
-            list->next = node;
+            list->next = new ListNode(append);
         }
         return head->next;
     }
